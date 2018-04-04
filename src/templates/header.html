@@ -1,0 +1,27 @@
+<div class="row header">
+    <div class="col-xs-12">
+        <div class="user pull-right" ng-if="user">
+            <div class="item dropdown" uib-dropdown>
+                <a ui-sref="index" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
+                    <img src="assets/avatar.jpg">
+                    <span>{{user.username}}</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li class="link">
+                        <a ui-sref="index" ng-click="logout()">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="meta">
+            <div class="page">
+                {{$state.current.title}}
+            </div>
+            <div class="breadcrumb-links">
+                Home / Dashboard
+            </div>
+        </div>
+    </div>
+</div>
